@@ -1,0 +1,21 @@
+// Homepage is required.
+// LOGIN page and registeration page is required.
+// A different page for admin
+    on login required for the admin
+    List of all the tenants should appear.
+    There should be red color tag for the tenants who are yet to make payment
+    On clicking admin should be able to see/download all the tenant info.
+
+//As soon as the tenant leaves his data will be deleted
+//User will have a different UI
+    He will be able to login/register
+    user will have a simple screen where he will put the upi number, screenshot of the payment.
+    on one colunm user will see the admin phone number/email
+    user will be able to update his data.
+
+Steps
+
+On first presentation
+  - I need to show, data of the users, on the admin page
+  - make a user login page, (only for admin right now)
+  - need to deploy

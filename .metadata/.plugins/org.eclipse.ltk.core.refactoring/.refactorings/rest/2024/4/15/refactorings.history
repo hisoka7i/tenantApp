@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;rest&apos;&#x0A;- Original project: &apos;rest&apos;&#x0A;- Original element: &apos;rest/src/main/java/com.TenetApp.rest.com.TenetApp.rest&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.TenetApp.rest.com.TenetApp.rest" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.TenetApp.rest.com.TenetApp" element3="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.TenetApp.rest.com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1712649882658" subPackages="false" version="1.0"/>
+</session>

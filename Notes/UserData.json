@@ -1,0 +1,17 @@
+[{
+  "name":"Rohit",
+  "gender":"Male",
+  "Phone":"9940520000",
+  "Rent":1000
+},{
+  "name":"Abhinav",
+  "gender":"Male",
+  "Phone":"9900xx90xx",
+  "Rent":2000
+}
+,{
+  "name":"admin",
+  "type":"admin",
+  "password":"admin"
+}
+]

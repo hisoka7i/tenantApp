@@ -9,6 +9,14 @@ public class Tenants {
 	private String type;
 	private String phone;
 	private int rent;
+	private String password;
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public String getName() {
 		return name;
 	}
@@ -45,7 +53,6 @@ public class Tenants {
 	@Override
 	public String toString() {
 		return "Tenants [name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone + ", rent=" + rent
-				+ "]";
+				+ ", password=" + password + "]";
 	}
-	
 }

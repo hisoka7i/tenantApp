@@ -16,18 +16,19 @@ const Login = () => {
     }
     function handler2(e){
         password = e.target.value;
-        console.log(name+password);
     }
     function loginFunction(){
         const body = {
             "name":name,
             "password":password
         }
+        // console.log(`${URL}`);
         axios.post(`${URL}/login`,body).then((response)=>{
             console.log(response.data);
             var status = response.status;
             if(status==200){
-                console.log("This part is working!");
+                //Session management will be done in the front end
+                navigate('/all');
             }
         }).catch((error)=>{
             console.log(error);
@@ -39,13 +40,11 @@ const Login = () => {
             <div class="container-main">
                 <div class="container">
                     <h2>Login</h2>
-                    <form action="#" method="post">
                         <label for="username">Username:</label>
                         <input type="text" id="username" onBlur={handler1} name="username" required />
                         <label for="password">Password:</label>
                         <input type="password" id="password" onBlur={handler2} name="password" required />
                         <button type="submit" onClick={loginFunction}>Let me in!</button>
-                    </form>
                 </div>
             </div>
         </>

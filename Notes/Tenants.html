@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Details</title>
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .card {
+        width: calc(33.33% - 20px); /* Adjust based on the number of cards per row */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .card-header {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-info {
+        margin-bottom: 10px;
+    }
+
+    .card-info span {
+        font-weight: bold;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+        .card {
+            width: calc(100% - 20px);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+    <!-- Repeat this card structure for each data -->
+    <div class="card">
+        <div class="card-header">User Details</div>
+        <div class="card-info">
+            <span>Name:</span> Rohit
+        </div>
+        <div class="card-info">
+            <span>Gender:</span> Male
+        </div>
+        <div class="card-info">
+            <span>Type:</span> User
+        </div>
+        <div class="card-info">
+            <span>Phone:</span> 9940520000
+        </div>
+        <div class="card-info">
+            <span>Rent:</span> $1000
+        </div>
+    </div>
+    <!-- End of card structure -->
+</div>
+
+</body>
+</html>

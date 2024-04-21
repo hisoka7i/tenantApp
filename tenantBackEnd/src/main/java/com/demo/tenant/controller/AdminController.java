@@ -33,9 +33,9 @@ public class AdminController {
 	
 	//I need to write a function for user login
 	//from the request body we will receive the json object and it 
-	@PostMapping("/login")
+	@PostMapping("/adminlogin")
 	public ResponseEntity<?> adminLogin(@RequestBody UserCred usercred){
-		Tenants dtoSend = adminSer.findbyUserPass(usercred);
+		Object dtoSend = adminSer.findbyUserPass(usercred);
 		if(dtoSend!=null) {
 			return ResponseEntity.ok(dtoSend);
 		}

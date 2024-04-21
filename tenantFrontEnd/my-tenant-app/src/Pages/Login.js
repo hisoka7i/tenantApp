@@ -23,7 +23,7 @@ const Login = () => {
             "password":password
         }
         // console.log(`${URL}`);
-        axios.post(`${URL}/login`,body).then((response)=>{
+        axios.post(`${URL}/adminlogin`,body).then((response)=>{
             console.log(response.data);
             var status = response.status;
             if(status==200){

@@ -9,9 +9,4 @@
   "Phone":"9900xx90xx",
   "Rent":2000
 }
-,{
-  "name":"admin",
-  "type":"admin",
-  "password":"admin"
-}
 ]

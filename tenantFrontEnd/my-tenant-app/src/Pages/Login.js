@@ -23,14 +23,13 @@ const Login = () => {
             "password":password
         }
         // console.log(`${URL}`);
-        axios.post(`${URL}/adminlogin`,body).then((response)=>{
+        axios.post(`${URL}/login`,body).then((response)=>{
             console.log(response.data);
             var status = response.status;
             if(status==200){
                 //Session management will be done in the front end
                 // "name": "Rohit","gender": "Male","type": "user","phone": "9940520000",
                 // "rent": 1000,"password": "1234"
-                sessionStorage['id']=1;
                 sessionStorage['name']=response.data.name;
                 sessionStorage['type']=response.data.type;
                 navigate('/all');

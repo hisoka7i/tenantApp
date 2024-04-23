@@ -7,5 +7,5 @@ import com.demo.tenant.modal.Admins;
 
 public interface AdminRepo extends MongoRepository<Admins, String>{
 	@Query("{'name': ?0, 'password': ?1}")
-	Admins findBy(String name,String password);
+	Admins findByAdmin(String name,String password);
 }

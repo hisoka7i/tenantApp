@@ -5,8 +5,8 @@ import './App.css';
 import Login from "./pages/Login";
 import Tenants from './pages/Tenants';
 const AuthorizeAdmin=()=>{
-  const status = sessionStorage['id'];
-  if(status==1){
+  const status = sessionStorage['type'];
+  if(status=='admin'){
     return <Tenants />
   }else{
     <Login />

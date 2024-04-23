@@ -10,4 +10,7 @@ public interface TenantsRepo extends MongoRepository<Tenants, String>{
 //	Tenants findByNamePassword(String name,String password);
 	@Query("{'name': ?0, 'password': ?1}")
 	Tenants findByUser(String name,String password);
+	
+	@Query("{'name':?0}")
+	Tenants findByName(String name);
 }

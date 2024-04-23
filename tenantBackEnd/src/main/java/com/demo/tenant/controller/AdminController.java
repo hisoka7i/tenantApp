@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.tenant.dto.UserCred;
-import com.demo.tenant.modal.Tenants;
 import com.demo.tenant.service.AdminServiceI;
+import com.demo.tenant.service.UserServiveI;
 
 @RestController
 @CrossOrigin("*")
 public class AdminController {
 	@Autowired
 	private AdminServiceI adminSer;
+	@Autowired
+	private UserServiveI userSer;
 	
 //	@RequestMapping(value="/")
 //	public void Redirect(@RequestBody  response) throws IOException {
@@ -33,11 +35,17 @@ public class AdminController {
 	
 	//I need to write a function for user login
 	//from the request body we will receive the json object and it 
-	@PostMapping("/adminlogin")
+	@PostMapping("/login")
 	public ResponseEntity<?> adminLogin(@RequestBody UserCred usercred){
-		Object dtoSend = adminSer.findbyUserPass(usercred);
-		if(dtoSend!=null) {
-			return ResponseEntity.ok(dtoSend);
+		//This is for admin login
+		Object dtoSendAdmin = adminSer.findbyUserPass(usercred);
+		//This is for user login
+		Object dtoSendUser = userSer.findByUserPass(usercred);
+		if(dtoSendAdmin!=null) {
+			return ResponseEntity.ok(dtoSendAdmin);
+		}
+		if(dtoSendUser!=null) {
+			return ResponseEntity.ok(dtoSendUser);
 		}
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}

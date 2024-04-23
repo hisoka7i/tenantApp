@@ -1,8 +1,8 @@
 package com.demo.tenant.service;
 
 import com.demo.tenant.dto.UserCred;
-import com.demo.tenant.modal.Admins;
+import com.demo.tenant.modal.Tenants;
 
 public interface UserServiveI {
-	Admins findByUserPass(UserCred userCred);
+	Tenants findByUserPass(UserCred userCred);
 }

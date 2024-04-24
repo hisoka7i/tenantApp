@@ -1,12 +1,23 @@
 [{
-  "name":"Rohit",
+  "name":"Hisoka",
   "gender":"Male",
-  "Phone":"9940520000",
-  "Rent":1000
+  "type":"user",
+  "phone":"9940520000",
+  "rent":1000,
+  "password":"1234"
 },{
-  "name":"Abhinav",
+  "name":"Gon",
   "gender":"Male",
-  "Phone":"9900xx90xx",
-  "Rent":2000
+  "type":"user",
+  "phone":"9940520000",
+  "rent":1000,
+  "password":"1234"
+},{
+  "name":"Chrollo",
+  "gender":"Male",
+  "type":"user",
+  "phone":"9940520000",
+  "rent":1000,
+  "password":"1234"
 }
 ]

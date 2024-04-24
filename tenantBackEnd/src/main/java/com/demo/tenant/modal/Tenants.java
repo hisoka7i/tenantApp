@@ -1,9 +1,12 @@
 package com.demo.tenant.modal;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="tenants")
 public class Tenants {
+	@Id
+	private String id;
 	private String name;
 	private String gender;
 	private String type;
@@ -47,12 +50,19 @@ public class Tenants {
 	public void setRent(int rent) {
 		this.rent = rent;
 	}
-	public Tenants() {
-		super();
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	@Override
 	public String toString() {
-		return "Tenants [name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone + ", rent=" + rent
-				+ ", password=" + password + "]";
+		return "Tenants [id=" + id + ", name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone
+				+ ", rent=" + rent + ", password=" + password + "]";
 	}
+	public Tenants() {
+		super();
+	}
+	
 }

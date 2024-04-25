@@ -2,16 +2,23 @@ package com.demo.tenant.modal;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection="tenants")
 public class Tenants {
 	@Id
 	private String id;
+	@Field("name")
 	private String name;
+	@Field("gender")
 	private String gender;
+	@Field("type")
 	private String type;
+	@Field("phone")
 	private String phone;
+	@Field("rent")
 	private int rent;
+	@Field("password")
 	private String password;
 	
 	public String getPassword() {

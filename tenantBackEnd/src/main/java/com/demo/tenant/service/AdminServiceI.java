@@ -2,6 +2,8 @@ package com.demo.tenant.service;
 
 import java.util.List;
 
+import org.bson.Document;
+
 import com.demo.tenant.dto.TenantData;
 import com.demo.tenant.dto.UserCred;
 import com.demo.tenant.modal.Admins;
@@ -15,7 +17,9 @@ public interface AdminServiceI {
 	
 	boolean deleteUser(String name);
 	
-	boolean updateUser(TenantData tenantData);
+	boolean updateUserRent(TenantData tenantData);
 	
-	boolean addUser(TenantData tenantData);
+	boolean addUser(Tenants tenantData);
+	
+	Document getFullData(String name);
 }

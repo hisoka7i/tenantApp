@@ -5,6 +5,7 @@ import NavigationBar from '../Component/NavigationBar';
 import './styles/Login.css';
 import axios from 'axios';
 import {URL} from '../config'
+import { AiFillEdit,AiOutlineCheck,AiOutlineUser,AiOutlineSmallDash } from "react-icons/ai";
 
 
 const Login = () => {
@@ -43,12 +44,13 @@ const Login = () => {
             <NavigationBar />
             <div class="container-main">
                 <div class="container">
-                    <h2>Login</h2>
-                        <label for="username">Username:</label>
+                <h2><AiFillEdit /> Login</h2>
+                        <label for="username"><AiOutlineUser /> Username:</label>
                         <input type="text" id="username" onBlur={handler1} name="username" required />
-                        <label for="password">Password:</label>
+                        <label for="password"><AiOutlineSmallDash /> Password:</label>
                         <input type="password" id="password" onBlur={handler2} name="password" required />
-                        <button type="submit" onClick={loginFunction}>Let me in!</button>
+                        <button type="submit" onClick={loginFunction}><AiOutlineCheck />
+ Let me in!</button>
                 </div>
             </div>
         </>

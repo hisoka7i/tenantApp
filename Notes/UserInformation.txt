@@ -1,0 +1,11 @@
+According to me.
+User data will contain:
+1. name
+2. Unique identification
+3. date of arrival
+4. payment information
+5. payment screenshot
+6. mobile phone number
+7. rent
+8. Password
+9. gender

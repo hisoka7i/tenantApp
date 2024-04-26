@@ -31,6 +31,8 @@ const Login = () => {
                 //Session management will be done in the front end
                 // "name": "Rohit","gender": "Male","type": "user","phone": "9940520000",
                 // "rent": 1000,"password": "1234"
+                //we are storing id to unique identify the row, or json data.
+                sessionStorage['id']=response.data.id;
                 sessionStorage['name']=response.data.name;
                 sessionStorage['type']=response.data.type;
                 navigate('/all');

@@ -22,6 +22,8 @@ public class Tenants {
 	private String password;
 	@Field("address")
 	private String address;
+	@Field("doa")
+	private String doa;
 	
 	public String getPassword() {
 		return password;
@@ -73,10 +75,18 @@ public class Tenants {
 		this.address = address;
 	}
 	
+	
+	public String getDoa() {
+		return doa;
+	}
+	public void setDoa(String doa) {
+		this.doa = doa;
+	}
+	
 	@Override
 	public String toString() {
 		return "Tenants [id=" + id + ", name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone
-				+ ", rent=" + rent + ", password=" + password + ", address=" + address + "]";
+				+ ", rent=" + rent + ", password=" + password + ", address=" + address + ", doa=" + doa + "]";
 	}
 	public Tenants() {
 		super();

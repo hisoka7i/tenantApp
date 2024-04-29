@@ -5,7 +5,8 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 import { URL } from '../config'
 import NavigationBar from '../Component/NavigationBar';
-import { FaUserCheck } from "react-icons/fa";
+import { FaUserCheck, FaPhone } from "react-icons/fa";
+import { FaRegAddressCard,FaPersonCircleCheck } from "react-icons/fa6";
 
 
 const Tenants = () => {
@@ -30,24 +31,25 @@ const Tenants = () => {
     const bgValue = "light";
     function showUsersData() {
         return userData.map((userInfo, i) => {
-            return(
-            <Card  bg={bgValue} className="text-center" style={{ padding:'2rem' }}>
-                {/* Name */}
-                <Card.Header text="dark"><h3>{userInfo.name}</h3></Card.Header>
-                <Card.Body>
-                    {/* Phone number */}
-                    <Card.Title>Phone number: {userInfo.phone}</Card.Title>
-                    {/* Address will come under this */}
-                    <Card.Text>
-                        This part will contain address of the person.
-                    </Card.Text>
-                    {/* To access the complete user data */}
-                    <Button size="sm" variant="primary"><FaUserCheck />
-</Button>
-                </Card.Body>
-                {/* Due date, will come under here */}
-                <Card.Footer className="text-muted">Rent Due in 2 days</Card.Footer>
-            </Card>
+            return (
+                <Card bg={bgValue} className="text-center" style={{ padding: '2rem' }}>
+                    {/* Name */}
+                    <Card.Header text="dark"><h3><FaPersonCircleCheck /> {userInfo.name}</h3></Card.Header>
+                    <Card.Body>
+                        {/* Phone number */}
+                        <Card.Title>
+                            Phone number: <FaPhone /> {userInfo.phone}</Card.Title>
+                        {/* Address will come under this */}
+                        <Card.Text>
+                            <FaRegAddressCard /> {userInfo.address}
+                        </Card.Text>
+                        {/* To access the complete user data */}
+                        <Button size="sm" variant="primary"><FaUserCheck />
+                        </Button>
+                    </Card.Body>
+                    {/* Due date, will come under here */}
+                    <Card.Footer className="text-muted">Rent Due in 2 days</Card.Footer>
+                </Card>
             );
         });
     }
@@ -59,7 +61,7 @@ const Tenants = () => {
     return (
         <>
             <NavigationBar />
-            <Container fluid style={{ padding:'2rem' }}>
+            <Container fluid style={{ padding: '2rem' }}>
                 {showUsersData()}
             </Container>
         </>

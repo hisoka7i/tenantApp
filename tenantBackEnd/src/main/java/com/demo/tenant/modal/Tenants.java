@@ -20,6 +20,8 @@ public class Tenants {
 	private int rent;
 	@Field("password")
 	private String password;
+	@Field("address")
+	private String address;
 	
 	public String getPassword() {
 		return password;
@@ -63,10 +65,18 @@ public class Tenants {
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
 	@Override
 	public String toString() {
 		return "Tenants [id=" + id + ", name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone
-				+ ", rent=" + rent + ", password=" + password + "]";
+				+ ", rent=" + rent + ", password=" + password + ", address=" + address + "]";
 	}
 	public Tenants() {
 		super();

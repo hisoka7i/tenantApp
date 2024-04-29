@@ -1,23 +1,69 @@
 [{
+  "name":"Abhinav Singh",
+  "gender":"Male",
+  "type":"user",
+  "phone":"9940520000",
+  "rent":1000,
+  "password":"1234",
+  "paymentStatus":true,
+  "uniqueID":"123498707890",
+  "address":"plot no.4, Greater Noida, Uttar Pradesh",
+  "doa":"14/12/2024",
+  "paymentImage":"",
+  "profileImage":""
+},{
+  "name":"Rohit Srivastava",
+  "gender":"Male",
+  "type":"user",
+  "phone":"9940520000",
+  "rent":1000,
+  "password":"1234",
+  "paymentStatus":true,
+  "uniqueID":"123498707890",
+  "address":"plot no.4, Greater Noida, Uttar Pradesh",
+  "doa":"14/12/2024",
+  "paymentImage":"",
+  "profileImage":""
+},
+{
   "name":"Hisoka",
   "gender":"Male",
   "type":"user",
   "phone":"9940520000",
   "rent":1000,
-  "password":"1234"
-},{
+  "password":"1234",
+  "paymentStatus":true,
+  "uniqueID":"123498707890",
+  "address":"plot no.4, Greater Noida, Uttar Pradesh",
+  "doa":"14/12/2024",
+  "paymentImage":"",
+  "profileImage":""
+},
+{
   "name":"Gon",
   "gender":"Male",
   "type":"user",
   "phone":"9940520000",
   "rent":1000,
-  "password":"1234"
+  "password":"1234",
+  "paymentStatus":true,
+  "uniqueID":"123498707890",
+  "address":"plot no.4, Greater Noida, Uttar Pradesh",
+  "doa":"14/12/2024",
+  "paymentImage":"",
+  "profileImage":""
 },{
   "name":"Chrollo",
   "gender":"Male",
   "type":"user",
   "phone":"9940520000",
   "rent":1000,
-  "password":"1234"
+  "password":"1234",
+  "paymentStatus":true,
+  "uniqueID":"123498707890",
+  "address":"plot no.4, Greater Noida, Uttar Pradesh",
+  "doa":"14/12/2024",
+  "paymentImage":"",
+  "profileImage":""
 }
 ]

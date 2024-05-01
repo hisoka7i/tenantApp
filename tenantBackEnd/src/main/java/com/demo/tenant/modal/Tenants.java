@@ -24,7 +24,15 @@ public class Tenants {
 	private String address;
 	@Field("doa")
 	private String doa;
+	@Field("paymentStatus")
+	private String paymentStatus;
 	
+	public String getPaymentStatus() {
+		return paymentStatus;
+	}
+	public void setPaymentStatus(String paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -83,10 +91,12 @@ public class Tenants {
 		this.doa = doa;
 	}
 	
+	
 	@Override
 	public String toString() {
 		return "Tenants [id=" + id + ", name=" + name + ", gender=" + gender + ", type=" + type + ", phone=" + phone
-				+ ", rent=" + rent + ", password=" + password + ", address=" + address + ", doa=" + doa + "]";
+				+ ", rent=" + rent + ", password=" + password + ", address=" + address + ", doa=" + doa
+				+ ", paymentStatus=" + paymentStatus + "]";
 	}
 	public Tenants() {
 		super();

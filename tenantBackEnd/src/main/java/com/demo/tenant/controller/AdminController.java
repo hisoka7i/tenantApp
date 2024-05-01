@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +17,12 @@ import com.demo.tenant.service.AdminServiceI;
 import com.demo.tenant.service.UserServiveI;
 
 @RestController
+@Component
 @CrossOrigin("*")
 public class AdminController {
-	@Autowired
+	@Autowired(required = true)
 	private AdminServiceI adminSer;
-	@Autowired
+	@Autowired(required = true)
 	private UserServiveI userSer;
 	
 //	@RequestMapping(value="/")

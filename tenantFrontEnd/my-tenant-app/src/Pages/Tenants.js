@@ -15,15 +15,15 @@ const Tenants = () => {
     const [userData, setUserData] = useState([]);
 
     //function to calculate due date
-    function calculateDaysDue(dateOfArrival) {
-     // Parse the date of arrival string
-     const [arrivalDay, arrivalMonth, arrivalYear] = dateOfArrival.split('/').map(Number);
- 
-     // Get the current date
-     const currentDate = new Date();
-     const currentMonth = currentDate.getMonth();
-     //write a return statement
-     return Math.abs(arrivalDay-currentDate.getDate());
+    function calculateDaysDue(arrivalDateString,paymentStatus) {
+     // Parse the arrival date string
+    const [arrivalDay, arrivalMonth, arrivalYear] = arrivalDateString.split('/').map(Number);
+    const dueDate = new Date(arrivalYear,arrivalMonth)
+    if(paymentStatus){
+        return "Payment Pending in 13 days";
+    }
+    // Return the due date as a string in the format "DD/MM/YYYY"
+    return "Payment Due, Please pay AS SOON AS possible";
     }
 
     function showUsers() {
@@ -43,13 +43,18 @@ const Tenants = () => {
                 console.log(error);
             });
     }
-    const bgValue = "light";
+    var bgValue = "light";
     function showUsersData() {
         return userData.map((userInfo, i) => {
+            if(userInfo.paymentStatus=='false'){
+                bgValue="danger";
+            }else{
+                bgValue="light";
+            }
             return (
                 <Card bg={bgValue} className="text-center" style={{ padding: '2rem' }}>
                     {/* Name */}
-                    <Card.Header text="dark"><h3><FaPersonCircleCheck /> {userInfo.name} {/* To access the complete user data and update it */}
+                    <Card.Header text="dark"><h3><FaPersonCircleCheck /> {userInfo.name}  {/* To access the complete user data and update it */}
                         <Button size="sm" variant="primary"><FaUserCheck />
                         </Button></h3></Card.Header>
                     <Card.Body>
@@ -66,7 +71,8 @@ const Tenants = () => {
 
                     </Card.Body>
                     {/* Due date, will come under here */}
-                    <Card.Footer className="text-muted">Rent Due in {calculateDaysDue(userInfo.doa)}</Card.Footer>
+                    
+                    <Card.Footer className="text-muted"><b>{calculateDaysDue(userInfo.doa,userInfo.paymentStatus)}</b></Card.Footer>
                 </Card>
             );
         });

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,14 +16,14 @@ import com.demo.tenant.dto.UserCred;
 import com.demo.tenant.modal.Admins;
 import com.demo.tenant.modal.Tenants;
 
-@Service
-@Transactional
+@Component
+@Service("AdminServiceI")
 public class AdminServiceImpl implements AdminServiceI {
-	@Autowired
+	@Autowired(required = true)
 	private TenantsRepo tenantRepo;
-	@Autowired
+	@Autowired(required = true)
 	private AdminRepo adminRepo;
-	@Autowired
+	@Autowired(required = true)
 	private MongoTemplate mongoTemplate;
 
 	@Override

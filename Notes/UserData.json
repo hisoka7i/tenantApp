@@ -6,6 +6,7 @@
   "rent":1000,
   "password":"1234",
   "paymentStatus":true,
+  "lastPaymentDate":"14/12/2024",
   "uniqueID":"123498707890",
   "address":"plot no.4, Greater Noida, Uttar Pradesh",
   "doa":"14/12/2024",

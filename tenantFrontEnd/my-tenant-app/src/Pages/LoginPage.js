@@ -8,7 +8,7 @@ import {URL} from '../config'
 import { AiFillEdit,AiOutlineCheck,AiOutlineUser,AiOutlineSmallDash } from "react-icons/ai";
 
 
-const Login = () => {
+const LoginPage = () => {
     const navigate = useNavigate();
     var name = "";
     var password = "";
@@ -58,4 +58,4 @@ const Login = () => {
         </>
     )
 };
-export default Login;
+export default LoginPage;

@@ -2,21 +2,21 @@ import logo from './logo.svg';
 import React from 'react';
 import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
 import './App.css';
-import Login from "./pages/Login";
 import Tenants from './pages/Tenants';
+import LoginPage from './pages/LoginPage';
 const AuthorizeAdmin=()=>{
   const status = sessionStorage['type'];
   if(status=='admin'){
     return <Tenants />
   }else{
-    <Login />
+    <LoginPage />
   }
 }
 const App = () =>{
   return(<>
   <BrowserRouter>
   <Routes>
-    <Route path="/" element={<Login/>}/>
+    <Route path="/" element={<LoginPage/>}/>
     <Route path="/all" element={<AuthorizeAdmin />}/>
   </Routes>
   </BrowserRouter>

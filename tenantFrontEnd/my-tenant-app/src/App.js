@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import React from 'react';
 import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
 import './App.css';
-import Tenants from './pages/Tenants.js';
-import LoginPage from './pages/LoginPage.js';
+import Tenants from './Pages/Tenants.js';
+import LoginPage from './Pages/LoginPage.js';
 const AuthorizeAdmin=()=>{
   const status = sessionStorage['type'];
   if(status=='admin'){

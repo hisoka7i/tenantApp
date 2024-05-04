@@ -1,7 +1,25 @@
 
 /etc/nginx/sites-available/
+sudo apt update
+sudo apt install node
+sudo apt intall npm
+sudo apt install nginx
+sudo systemctl enable nginx
+systemctl status nginx
+cd /usr/share/nginx/html
 
-rm -r /home/ubuntu/tenantApp
+//--- clone the project
+git clone --filter=blob:none --no-checkout https://github.com/hisoka7i/tenantApp.git
+cd tenantApp/
+git sparse-checkout set --cone
+git checkout main
+git sparse-checkout set tenantFrontEnd
+
+
+npm install
+npm run build
+
+
 
 server {
     listen 80;

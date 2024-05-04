@@ -1,0 +1,18 @@
+
+/etc/nginx/sites-available/
+
+rm -r /home/ubuntu/tenantApp
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name example.com;
+
+    root /home/ubuntu/tenantApp/tenantFrontEnd/my-tenant-app/build;
+
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}

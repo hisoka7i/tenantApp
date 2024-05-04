@@ -3,3 +3,8 @@ cd tenantApp/
 git sparse-checkout set --cone
 git checkout main
 git sparse-checkout set tenantFrontEnd
+
+
+
+//To remove a directory
+rm -r /home/ubuntu/tenantApp

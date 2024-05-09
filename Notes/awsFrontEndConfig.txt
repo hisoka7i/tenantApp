@@ -6,7 +6,7 @@ sudo apt intall npm
 sudo apt install nginx
 sudo systemctl enable nginx
 systemctl status nginx
-cd /usr/share/nginx/html
+cd/etc/init.d/nginx restart
 
 //--- clone the project
 git clone --filter=blob:none --no-checkout https://github.com/hisoka7i/tenantApp.git
@@ -16,9 +16,10 @@ git checkout main
 git sparse-checkout set tenantFrontEnd
 
 
-npm install
-npm run build
+... Very Important
+instead for doing npm run build in aws ec2. Do it in local machine and then run it on server.
 
+copy the build folder in sudo cp -r /build /var/www/html/
 
 
 server {

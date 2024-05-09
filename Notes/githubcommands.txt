@@ -6,5 +6,4 @@ git sparse-checkout set tenantFrontEnd
 
 
 
-//To remove a directory
 rm -r /home/ubuntu/tenantApp
